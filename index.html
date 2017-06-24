@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Hello!</title>
+<head lang = "en">
+    <meta charset = "UTF-8">
+    <title>Junior FrontEnd Test</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<div id = container>
+		<form id = myForm onsubmit="return searchUser(this)">
+    		<input id = inputbox type = "text" placeholder = "Search username...">
+    		<input id = inputbutton type = "submit" value = "Search">
+    	</form>
 
-<h1>Hello!</h1>
+    	<div id = errorContainer >
+    		<p id = errorMessage>Does not exist</p>
+    	</div>
+
+    	<div id = bioInfo >
+    		<div id = profilePicDiv>
+    			<img id = profilePic alt = "profilePic">
+    		</div>
+    		<div id = profileInfoDiv>
+    			<p id = userName></p>
+    			<p id = fullName></p>
+    			<p id = bio></p>
+    		</div>
+    	</div>
+
+    	<div id = reposContainer >
+    		<p id = reposTitle>Repositories</p>
+    		<hr id = listStart>
+    		<ul id = reposInfo>
+    			
+    		</ul>
+    	</div>
+    </div>
+
+<script src = "searchScript.js"></script>
 </body>
 </html>

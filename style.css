@@ -1,0 +1,171 @@
+body{
+	background: #EEEEEE;
+	text-align: center
+}
+
+#inputbox {
+	margin: 0;
+	box-sizing: border-box;
+	float: left;
+	width: 77%;
+}
+#button {
+	margin: 0;
+	box-sizing: border-box;
+	float: right;
+}
+
+#container {
+	background: #FFFFFF;
+	border-radius: 10px;
+	padding: 25px;
+	display: inline-block;
+	box-shadow: 8px 8px 5px #AAAAAA;
+	max-width: 350px;
+	width: 350px;
+}
+
+#errorContainer {
+	margin-top: 10px;
+	background: #ffd6d3;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ce9692;
+	border-radius: 3px;
+	text-align: left;
+	display: none;
+}
+
+#errorMessage {
+	margin-left: 15px;
+	color: #752323;
+	font-family: "Arial";
+}
+
+#bioInfo {
+	margin-top: 15px;
+	display: none;
+	text-align: left;
+}
+
+#profilePic {
+  	max-width:80px;
+  	width: 80px;
+  	height: auto;
+  	border-radius: 3px;
+}
+
+#profilePicDiv {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+#profileInfoDiv {
+	float: left;
+	margin-left: 10px;
+	max-width: 260px;
+}
+
+#userName {
+	font-family: "Arial";
+	font-style: italic;
+	font-size: 12px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+#fullName {
+	font-family: "Arial";
+	font-size: 36px;
+	font-weight: bold;
+	color: #333333;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	/*Add the following lines to display only
+	one line of bio:
+	
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;*/
+}
+
+#bio {
+	font-family: "Arial";
+	font-size: 12px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	/*Add the following lines to display only
+	one line of bio:
+	
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;*/
+}
+
+#reposContainer {
+	clear: both;
+	padding-top: 2px;
+	overflow: hidden;
+	display: none;
+}
+
+#reposTitle {
+	font-family: "Arial";
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+#listStart {
+	height: 2px;
+	background-color: #555555;
+	background-color: #555555;
+	margin-top: 0px;
+	border: none;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	list-style-type: none;
+	font-family: "Arial";
+	font-weight: bold;
+	overflow-y: scroll;
+	max-height: 350px;
+	width: 100%;
+}
+
+hr{
+	height: 1px;
+	color: #EEEEEE;
+	background-color: #DDDDDD;
+	border: none;
+}
+
+.repo {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.iconContainer {
+	float: right;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.imgIcon {
+	float: left;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.repoName {
+	max-width: 70%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

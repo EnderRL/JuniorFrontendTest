@@ -1,0 +1,24 @@
+JavaScript
+============
+- From the screenshots I assumed you wanted the repo list to be scrollable 
+without a scrollbar. I implemented that through JS by hidding it with some
+padding, trying to maximize browser compatibility so that it behaved the same
+in all browsers. Not sure whether that is the best approach, though.
+
+- I added the clear methods because just hiding and showing the different 
+sections had a problem: when you loaded a profile, then looked for somebody
+who didn't exist and received an error, and then looked for someone else who 
+did exist, the error message would hide and the info would come up, but because
+of the asynchronous nature of the xmlhttprequest, the info might still be in
+the process of updating, so sometimes you could see slight glimpses of the 
+information belonging to the previous search results.
+
+Unit Testing with Jasmine
+=========================
+
+- I had done unit testing before at college (we tested each class and module
+separately, making sure all the methods worked properly by their own). I
+had never done it with web-related code but the Jasmine framework was really
+friendly and easy to pick up, so I managed to make some tests. However, I 
+wasn't able to figure out the best way of spying on a method called from an 
+anonymous function asynchronously.

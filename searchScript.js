@@ -1,3 +1,6 @@
+/*Takes the user input from the form and searches for it via
+Github API. If such an username exists, it displays said user
+info. Else, it shows an error message.*/
 function searchUser() {
 	var form = document.getElementById("myForm");
 	var xmlhttp = new XMLHttpRequest();
@@ -9,41 +12,58 @@ function searchUser() {
         								  form[0].value.toLowerCase()) {
         		displayErrorMessage();
         	} else {
-        		showUserInfo(form[0].value);
+        		displayUserInfo(form[0].value);
         	}
     	}
 	};
-	var userInfo = "https://api.github.com/search/users?q=" + form[0].value;
+	var userInfo = "https://api.github.com/search/users?q=" + form[0].value + " in:login";
 	xmlhttp.open("GET", userInfo, true);
 	xmlhttp.send();
 	return false;
 }
 
-function displayErrorMessage() {
-	var bioSection = document.getElementById("bioInfo");
-	bioSection.style.display = "none";
-	var repoSection = document.getElementById("reposContainer");
-	repoSection.style.display = "none";
-	var error = document.getElementById("errorContainer");
-    error.style.display = "block";
+/*Makes the user information section visible*/
+function showInfo() {
+	document.getElementById("bioInfo").style.display = "block";
+	document.getElementById("reposContainer").style.display = "block";
 }
 
-function showUserInfo(username) {
-	var biourl = "https://api.github.com/users/" + username;
-	showBioInfo(biourl);
-	var repourl = biourl + "/repos";
-	showRepoInfo(repourl);
+/*Hides the user information section*/
+function hideInfo() {
+	document.getElementById("bioInfo").style.display = "none";
+	document.getElementById("reposContainer").style.display = "none";
+}
 
-	var bioSection = document.getElementById("bioInfo");
-	bioSection.style.display = "block";
-	var repoSection = document.getElementById("reposContainer");
-	repoSection.style.display = "block";
-	var error = document.getElementById("errorContainer");
-    error.style.display = "none";
+/*Makes the error section visible*/
+function showError() {
+	document.getElementById("errorContainer").style.display = "block";
+}
+
+/*Hides the error section*/
+function hideError() {
+	document.getElementById("errorContainer").style.display = "none";
+}
+
+/*Displays an error message*/
+function displayErrorMessage() {
+	hideInfo();
+	showError();
+}
+
+/*Displays the user information*/
+function displayUserInfo(username) {
+	var biourl = "https://api.github.com/users/" + username;
+	displayBioInfo(biourl);
+	var repourl = biourl + "/repos";
+	displayRepoInfo(repourl);
+
+	hideError();
+	showInfo();
 	return false;
 }
 
-function showBioInfo(biourl) {
+/*Displays the Github bio information for the searched user*/
+function displayBioInfo(biourl) {
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
     	if (this.readyState == 4 && this.status == 200) {
@@ -58,7 +78,8 @@ function showBioInfo(biourl) {
 	xmlhttp.send();
 }
 
-function showRepoInfo(repourl){
+/*Displays the searched user's Github repositories*/
+function displayRepoInfo(repourl){
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
     	if (this.readyState == 4 && this.status == 200) {

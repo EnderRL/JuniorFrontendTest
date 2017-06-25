@@ -1,18 +1,30 @@
 body{
-	background: #EEEEEE;
-	text-align: center
+	background: #F0F0F0;
+	text-align: center;
+	font-family: "Arial";
+	color: #363636;
 }
 
 #inputbox {
-	margin: 0;
 	box-sizing: border-box;
-	float: left;
-	width: 77%;
+	border-radius: 2px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #D4D4D4;
+	padding: 8px;
+	width: 78%;
 }
-#button {
-	margin: 0;
+#inputbutton {
 	box-sizing: border-box;
-	float: right;
+	padding: 8px;
+	border-radius: 2px;
+	border: solid;
+	border-color: #CBCBCB;
+	width: 20%;
+	border-width: 1px;
+	background: #FFFFFF;
+	background: linear-gradient(#FFFFFF, #EFEFEF);
+	font-weight: bold;
 }
 
 #container {
@@ -20,32 +32,35 @@ body{
 	border-radius: 10px;
 	padding: 25px;
 	display: inline-block;
-	box-shadow: 8px 8px 5px #AAAAAA;
+	box-shadow: 8px 8px 15px #ACACAC;
 	max-width: 350px;
 	width: 350px;
 }
 
 #errorContainer {
 	margin-top: 10px;
-	background: #ffd6d3;
+	background: #FBDBDB;
 	border-style: solid;
 	border-width: 1px;
-	border-color: #ce9692;
+	border-color: #D0AFAF;
 	border-radius: 3px;
 	text-align: left;
 	display: none;
 }
 
 #errorMessage {
+	padding-top: 4px;
+	padding-bottom: 4px;
 	margin-left: 15px;
-	color: #752323;
-	font-family: "Arial";
+	color: #950000;
+	font-size: 12px;
 }
 
 #bioInfo {
 	margin-top: 15px;
 	display: none;
 	text-align: left;
+	color: #363636;
 }
 
 #profilePic {
@@ -67,7 +82,6 @@ body{
 }
 
 #userName {
-	font-family: "Arial";
 	font-style: italic;
 	font-size: 12px;
 	margin-top: 2px;
@@ -75,10 +89,8 @@ body{
 }
 
 #fullName {
-	font-family: "Arial";
 	font-size: 36px;
 	font-weight: bold;
-	color: #333333;
 	margin-top: 2px;
 	margin-bottom: 2px;
 	/*Add the following lines to display only
@@ -90,7 +102,6 @@ body{
 }
 
 #bio {
-	font-family: "Arial";
 	font-size: 12px;
 	margin-top: 2px;
 	margin-bottom: 2px;
@@ -110,7 +121,6 @@ body{
 }
 
 #reposTitle {
-	font-family: "Arial";
 	font-size: 16px;
 	font-weight: bold;
 	text-align: left;
@@ -119,8 +129,8 @@ body{
 
 #listStart {
 	height: 2px;
-	background-color: #555555;
-	background-color: #555555;
+	background-color: #767676;
+	background: #767676;
 	margin-top: 0px;
 	border: none;
 }
@@ -130,7 +140,6 @@ ul{
 	padding: 0;
 	text-align: left;
 	list-style-type: none;
-	font-family: "Arial";
 	font-weight: bold;
 	overflow-y: scroll;
 	max-height: 350px;
@@ -139,8 +148,8 @@ ul{
 
 hr{
 	height: 1px;
-	color: #EEEEEE;
-	background-color: #DDDDDD;
+	color: #CBCBCB;
+	background-color: #CBCBCB;
 	border: none;
 }
 

@@ -27,6 +27,10 @@ body{
 	font-weight: bold;
 }
 
+#inputbutton:hover {
+	background: linear-gradient(#FFFFFF, #AAFEFF);
+}
+
 #container {
 	background: #FFFFFF;
 	border-radius: 10px;
